@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- overlay for mobile when menu open -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- hamburger -->
+  <button aria-label="Open menu" class="hamburger" id="hamburger" title="menu">
+    <span class="bar"></span>
+  </button>
+
+  <!-- sidebar -->
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main menu">
+    <div class="logo" id="logo">Malav Kumar</div>
+
+    <ul class="nav" id="nav">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- page content -->
+  <main class="page" id="page">
+    <header class="container" id="home">
+       <!-- hero -->
+      <section class="hero reveal">
+        <h1>Hello, My Name is  <span class="accent">Malav Kumar</span></h1>
+        <div class="role">I'm a <span style="color:var(--accent); font-weight:800;" id="typingTarget">Web Designer</span></div>
+        <div class="cta">
+          <button class="btn" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})" style="font-size: 1.4rem;">View Projects</button>
+        </div>
+      </section>
+       <!-- image -->
+      <aside class="card reveal" aria-hidden="false">
+        <div class="photo" style="background-image:url(photo2.png)"></div>
+        <h3>Malav Kumar</h3>
+        <p>Tech Enthusiast And Passionate Coder</p>
+        <div style="display:flex;justify-content:center;gap:8px">
+          <span style="opacity:.4">•</span>
+          <a href="https://www.linkedin.com/in/malav-kumar-b30063375/" target="_blank" style="color:var(--muted);text-decoration:none;font-weight:600">LinkedIn</a>
+          <span style="opacity:.4">•</span>
+          <a href="https://github.com/malav-kumar" target="_blank" style="color:var(--muted);text-decoration:none;font-weight:600">GitHub</a>
+        </div>
+      </aside>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>About</h2>
+          <p style="font-size: 1.325rem">— Quick Introduction</p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>I am Malav Kumar, currently studying at Scaler School of Technology. I aspire to become a skilled AI
+                developer.At present, I am learning HTML, CSS, JavaScript,
+                Python, Java And I enjoy turning complex problems into simple, beautiful interfaces..  </p>
+            <p>I am passionate about learning and exploring various fields to discover my true interests. Currently, my goal is to reach the ICPC World Finals and further deepen my knowledge in competitive programming.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>— Tools & technologies</p>
+        </div>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="label"><span>HTML & CSS</span><span>60%</span></div>
+            <div class="bar"><i data-width="60%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>JavaScript</span><span>30%</span></div>
+            <div class="bar"><i data-width="30%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>Java</span><span>75%</span></div>
+            <div class="bar"><i data-width="75%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="label"><span>Python</span><span>50%</span></div>
+            <div class="bar"><i data-width="50%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>— Selected works</p><br><br>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project">
+            <img alt="project" src="game.png" />
+            <h3>The Last Glow🔥</h3>
+            <p style="color:var(--muted);font-size:.95rem">A survival adventure where your fading light is your lifeline—stay bright, solve puzzles, and fight the darkness before it consumes you.</p>
+            <div style="margin-top:8px">  <a href="https://jain-arham-hsr.itch.io/the-last-glow" target="_blank"><button class="btn" >View</button></a></div>
+          </article>
+
+          <article class="project">
+            <img alt="project" src="ferriewheel.png" />
+            <h3>Ferris Wheel🎡</h3>
+            <p style="color:var(--muted);font-size:.95rem">A colorful Ferris wheel animation spins continuously, with cabins rotating in sync while changing colors.</p>
+            <div style="margin-top:8px"><a href="https://github.com/malav-kumar/Assignment/blob/main/ferriswheel.html" target="_blank"><button class="btn">Github</button></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>— Let's work together</p>
+        </div>
+
+        <div class="contact-grid">
+          <form onsubmit="event.preventDefault(); alert('Thanks For The Message!');">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Email address" required />
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Message" required></textarea>
+            <div style="display:flex; gap:8px;">
+              <button class="btn" type="submit">Send message</button>
+              <button type="reset" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:10px 14px;border-radius:8px;font-size: 0.9rem;">Reset</button>
+            </div>
+          </form>
+          <aside class="card">
+            <h3 style="font-size: 1.4rem;margin:6px 0;">Get In Touch</h3>
+            <p style="color:var(--muted);margin:0 0 10px 0;">LinkedIn Handle : Malav Kumar</p>
+            <p style="color:var(--muted);margin:0 0 10px 0;">malavkumar007@gmail.com</p>
+            <p style="color:var(--muted);margin:0 0 10px 0;">📍Bengaluru, India</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <p >© Copyright 2025 All rights reseved.</p>
+        <a href="https://www.instagram.com/malavnagar13/" target="_blank">
+            <img src="instalogo.png" height="50px" alt="instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/malav-kumar-b30063375/" target="_blank">
+            <img src="linkedInlogo.png" height="50px"alt="LinkedIn">
+        </a>
+        <a href="https://github.com/malav-kumar" target="_blank">
+            <img src="githublogo.png" height="50px" alt="GitHub">
+        </a>
+        <a href="https://codeforces.com/profile/malav_kumar" target="_blank">
+           <img src="Cflogo1.png" width="70px" alt="CodeForces">
+        </a>
+    </footer>
+  </main>
+
+<script>
+/* === DOM elements === */
+const sidebar = document.getElementById('sidebar');
+const hamburger = document.getElementById('hamburger');
+const overlay = document.getElementById('overlay');
+const navLinks = document.querySelectorAll('.nav-link');
+const logo = document.getElementById('logo');
+const page = document.getElementById('page');
+
+/* === Menu open/close === */
+function openMenu() {
+  sidebar.classList.remove('hide');
+  hamburger.classList.add('open');
+  overlay.classList.add('show');
+  logo.style.transform = 'translateY(10px)';
+}
+
+function closeMenu() {
+  sidebar.classList.add('hide');
+  hamburger.classList.remove('open');
+  overlay.classList.remove('show');
+  logo.style.transform = '';
+}
+
+/* === Hamburger toggle === */
+hamburger.addEventListener('click', () => {
+  hamburger.classList.contains('open') ? closeMenu() : openMenu();
+});
+overlay.addEventListener('click', closeMenu);
+
+/* === Responsive resize handling === */
+function handleResize() {
+  requestAnimationFrame(() => {
+    if (window.innerWidth > 820) {
+      sidebar.classList.remove('hide');
+      overlay.classList.remove('show');
+      hamburger.classList.remove('open');
+      logo.style.transform = '';
+      page.style.marginLeft = '320px';
+    } else {
+      sidebar.classList.add('hide');
+      page.style.marginLeft = '0';
+    }
+  });
+}
+window.addEventListener('resize', handleResize);
+handleResize(); // set correct state on load
+
+/* === Smooth scroll and active link === */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const id = link.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.innerWidth <= 820) closeMenu();
+    }
+  });
+});
+
+/* === Active nav highlight on scroll === */
+const sections = Array.from(document.querySelectorAll('main > header, section'));
+function updateActive() {
+  const top = window.scrollY + 120;
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const s = sections[i];
+    if (s.offsetTop <= top) {
+      const id = s.id || 'home';
+      navLinks.forEach(n => n.classList.toggle('active', n.getAttribute('href') === '#' + id));
+      break;
+    }
+  }
+}
+updateActive();
+window.addEventListener('scroll', updateActive);
+
+/* === Typing effect === */
+(function typingEffect() {
+  const el = document.getElementById('typingTarget');
+  const words = ['Web Designer', 'Frontend Developer', 'Backend Enthusiast', 'Design Engineer'];
+  let i = 0, idx = 0, forward = true;
+  function tick() {
+    const word = words[i];
+    if (forward) {
+      idx++;
+      el.textContent = word.slice(0, idx);
+      if (idx === word.length) { forward = false; setTimeout(tick, 1200); return; }
+    } else {
+      idx--;
+      el.textContent = word.slice(0, idx);
+      if (idx === 0) { forward = true; i = (i + 1) % words.length; setTimeout(tick, 250); return; }
+    }
+    setTimeout(tick, 80);
+  }
+  tick();
+})();
+
+/* === Scroll reveal + skill bar animation === */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.querySelectorAll('.bar > i').forEach(i => {
+        const w = i.getAttribute('data-width') || '80%';
+        i.style.width = w;
+      });
+    }
+  });
+}, { threshold: 0.16 });
+revealEls.forEach(el => io.observe(el));
+
+/* === Keyboard accessibility for hamburger === */
+hamburger.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hamburger.click(); }
+});
+</script>
+</body>
+</html>
